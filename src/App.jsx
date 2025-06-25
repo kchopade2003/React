@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import Intro1 from './components/Intro1'
 import Intro2 from './components/Intro2'
-<<<<<<< HEAD
-import './App.css'
-=======
 import Hello from './JSX/Hello'
 import Student1 from './Props/Student1'
 import './App.css'
@@ -18,7 +15,10 @@ import UseEffectHook1 from './useEffect/UseEffectHook1'
 import UseEffectHook2 from './useEffect/UseEffectHook2'
 import Fetching from './useEffect/Fetching'
 import Fetching2 from './useEffect/Fetching2'
->>>>>>> 3fe87b5dc33c3fc3bb0057eb6d9e8237267ca83d
+import ComponentA from './useContext/ComponentA'
+import ComponentC from './useContext/ComponentC'
+
+export const userContext = React.createContext()
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,10 +26,8 @@ function App() {
   return (
     <div>
       <h1>Welcome everyone</h1>
-<<<<<<< HEAD
-      <Intro1></Intro1>
-      <Intro2></Intro2>
-=======
+      {/* <Intro1></Intro1> */}
+      {/* <Intro2></Intro2> */}
       {/* Component */}
       {/* <Intro1></Intro1>
       <Intro2></Intro2> */}
@@ -59,9 +57,12 @@ function App() {
       {/* <UseEffectHook1></UseEffectHook1> */}
       {/* <UseEffectHook2></UseEffectHook2> */}
       {/* <Fetching></Fetching> */}
-      <Fetching2></Fetching2>
+      {/* <Fetching2></Fetching2> */}
 
->>>>>>> 3fe87b5dc33c3fc3bb0057eb6d9e8237267ca83d
+      <userContext.Provider value={'Ketan'}>
+        <ComponentC></ComponentC>
+      </userContext.Provider>
+
     </div>
   )
 }
